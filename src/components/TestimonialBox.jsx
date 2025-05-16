@@ -1,5 +1,3 @@
-
-
 function TestimonialBox({ image, desc, name, position }) {
   return (
     <div className="bg-[#21293c] rounded-[5px] p-[30px] shadow-[8px_8px_1px_8px_#1c202c]">
@@ -8,7 +6,8 @@ function TestimonialBox({ image, desc, name, position }) {
       </p>
       <div className="flex items-center gap-[15px]">
         <img
-          src={`/src/assets/images/${image}`}
+          src={`/images/${image}`}
+          alt={`${name}-image`}
           className="w-[50px] h-[50px] rounded-[50%] object-contain"
         />
         <div>

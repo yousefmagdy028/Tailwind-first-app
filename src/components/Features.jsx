@@ -1,10 +1,11 @@
 import { useState } from "react";
 import FeatureBox from "./FeatureBox";
+
 function Features() {
-  const [items, setItems] = useState([
+  const [items] = useState([
     {
       icon: "icon-access-anywhere.svg",
-      title: "Acces your files,anywhere",
+      title: "Access your files, anywhere",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut sed beatae, laboriosam enim voluptatum quia.",
     },
     {
@@ -23,22 +24,23 @@ function Features() {
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut sed beatae, laboriosam enim voluptatum quia.",
     },
   ]);
+
   return (
     <section className="pb-[150px]">
       <div className="container">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-[100px] w-[865px] max-w-full mx-auto ">
-      {items.map((item) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[100px] w-[865px] max-w-full mx-auto">
+          {items.map((item, index) => (
             <FeatureBox
-              key={item.title}
+              key={index}
               title={item.title}
               icon={item.icon}
               desc={item.desc}
             />
           ))}
-      </div>
+        </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Features
+export default Features;
