@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react-swc' // تغيير هنا
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Tailwind-first-app/' // اسم المستودع بالضبط
+  base:`/Tailwind-first-app/`
 })
